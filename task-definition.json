@@ -1,14 +1,15 @@
 {
-    "family": "nodejs-webserver",
+    "family": "NodejsTask",
     "containerDefinitions": [
         {
-            "image": "783858137024.dkr.ecr.us-east-1.amazonaws.com/jenkins-docker-ecr:latest",
-            "name": "nodejs",
+            "image": "783858137024.dkr.ecr.us-east-1.amazonaws.com/jenkins-repo-ecr:latest",
+            "name": "nodejscontainer",
 	    "essential": true,
             "portMappings": [
                 {
                     "containerPort": 3000,
-                    "hostPort": 3000
+                    "hostPort": 3000,
+                    "protocol": "tcp"
                 }
             ]
         }
